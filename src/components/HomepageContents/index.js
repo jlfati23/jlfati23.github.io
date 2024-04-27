@@ -58,7 +58,7 @@ function Content({title, description}) {
   );
 }
 
-export default function HomepageFeatures() {
+export default function HomepageContents() {
   return (
     <section className={styles.contents}>
           {ContentList.map((props, idx) => (<Content key={idx} {...props} />))}

@@ -4,3 +4,9 @@
   overflow: hidden;
   max-width: 32em;
 }
+
+.footers{
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
