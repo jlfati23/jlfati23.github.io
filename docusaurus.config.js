@@ -12,10 +12,11 @@ const config = {
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://jessicali1625.github.io',
   baseUrl: '/',
   organizationName: 'jessicali1625', 
   projectName: 'jl.github.io',
+  deploymentBranch: 'main',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
