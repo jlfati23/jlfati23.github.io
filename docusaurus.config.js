@@ -15,7 +15,7 @@ const config = {
   url: 'https://jessicali1625.github.io',
   baseUrl: '/',
   organizationName: 'jessicali1625', 
-  projectName: 'jl.github.io',
+  projectName: 'jessicali1625.github.io',
   deploymentBranch: 'main',
 
   onBrokenLinks: 'throw',
