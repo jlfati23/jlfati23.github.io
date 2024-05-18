@@ -10,3 +10,12 @@
   justify-content: space-around;
   gap: 10px;
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  background-image: url(img/sea-shore-ocean-during-sunset-hg.jpg);
+  background-size: auto, auto;
+}

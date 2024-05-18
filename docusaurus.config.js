@@ -7,8 +7,8 @@ const config = {
 
     url: 'https://jessicali1625.github.io',
     baseUrl: '/',
-    organizationName: 'jessicali1625',
-    projectName: 'jessicali1625.github.io',
+    organizationName: 'jlfati23',
+    projectName: 'jlfati23.github.io',
     deploymentBranch: 'main',
 
     onBrokenLinks: 'throw',
@@ -57,6 +57,11 @@ const config = {
                         position: 'right'
                     }
                 ],
+            },
+            colorMode: {
+                defaultMode: 'dark',
+                disableSwitch: true,
+                respectPrefersColorScheme: false,
             },
         }),
 };
