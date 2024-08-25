@@ -1,5 +1,4 @@
 ---
-id: docker-basics
 tags: 
 - docker
 - devops
