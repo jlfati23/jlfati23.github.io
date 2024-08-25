@@ -59,7 +59,7 @@ const config = {
                 ],
             },
             colorMode: {
-                defaultMode: 'dark',
+                defaultMode: 'light',
                 disableSwitch: true,
                 respectPrefersColorScheme: false,
             },

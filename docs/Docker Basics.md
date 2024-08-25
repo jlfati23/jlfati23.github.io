@@ -1,3 +1,9 @@
+---
+id: docker-basics
+tags: 
+- docker
+- devops
+---
 
 <!-- TOC -->
 * [Docker Commands](#docker-commands)
