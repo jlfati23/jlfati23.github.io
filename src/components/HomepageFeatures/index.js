@@ -4,7 +4,6 @@ const HomepageFeatures = () => {
     return (
         <MainContainer>
             <CenterContent>
-                <Picture src="img/sea-shore-ocean-during-sunset-hg.jpg" alt="Description of the image"/>
                 <Quote>
                     "There are no facts, only interpretations."
                 </Quote>
