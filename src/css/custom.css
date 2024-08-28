@@ -6,25 +6,26 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #674188; /* Main primary color */
+  --ifm-color-primary-dark: #5a3671; /* Darker shade of primary color */
+  --ifm-color-primary-darker: #4e2a5a; /* Even darker shade of primary color */
+  --ifm-color-primary-darkest: #3d1e4a; /* Darkest shade of primary color */
+  --ifm-color-primary-light: #C8A1E0; /* Light shade of primary color */
+  --ifm-color-primary-lighter: #E2BFD9; /* Lighter shade of primary color */
+  --ifm-color-primary-lightest: #F7EFE5; /* Lightest shade of primary color */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1); /* Code highlight background color */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #C8A1E0; /* Main primary color for dark mode */
+  --ifm-color-primary-dark: #b089d4; /* Darker shade of primary color for dark mode */
+  --ifm-color-primary-darker: #a278b4; /* Even darker shade of primary color for dark mode */
+  --ifm-color-primary-darkest: #8d60a4; /* Darkest shade of primary color for dark mode */
+  --ifm-color-primary-light: #E2BFD9; /* Light shade of primary color for dark mode */
+  --ifm-color-primary-lighter: #F7EFE5; /* Lighter shade of primary color for dark mode */
+  --ifm-color-primary-lightest: #F7EFE5; /* Lightest shade of primary color for dark mode */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3); /* Code highlight background color for dark mode */
 }
+

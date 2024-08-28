@@ -1,10 +1,8 @@
-
-
-const config =  {
+const config= {
     title: 'Room of JL \'s own ',
-    favicon: 'img/favicon.ico',
+    favicon: 'img/door-closed-svgrepo-com.svg',
 
-    url: 'https://jessicali1625.github.io',
+    url: 'https://jlfati23.github.io',
     baseUrl: '/',
     organizationName: 'jlfati23',
     projectName: 'jlfati23.github.io',
@@ -30,32 +28,33 @@ const config =  {
     ],
 
     themeConfig:
-        ({
-            navbar: {
-                logo: {
-                    alt: 'Door Closed',
-                    src: 'img/door-closed-svgrepo-com.svg',
+        (
+            {
+                navbar: {
+                    logo: {
+                        src: 'img/dog-bone-svgrepo-com.svg',
+                    },
+                    items: [
+                        {
+                            type: 'docSidebar',
+                            sidebarId: 'tutorialSidebar',
+                            position: 'right',
+                            label: 'Docs',
+                        },
+                        {
+                            to: '/blog',
+                            label: 'Blogs',
+                            position: 'right'
+                        },
+                    ],
                 },
-                items: [
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'tutorialSidebar',
-                        position: 'right',
-                        label: 'Docs',
-                    },
-                    {
-                        to: '/blog',
-                        label: 'Blogs',
-                        position: 'right'
-                    },
-                ],
-            },
-            colorMode: {
-                defaultMode: 'light',
-                disableSwitch: true,
-                respectPrefersColorScheme: false,
-            },
-        }),
+                colorMode: {
+                    defaultMode: 'light',
+                    disableSwitch: true,
+                    respectPrefersColorScheme: false,
+                },
+            }
+        ),
 };
 
 export default config;
