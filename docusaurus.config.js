@@ -1,6 +1,6 @@
 
 
-const config = {
+const config =  {
     title: 'Room of JL \'s own ',
     favicon: 'img/favicon.ico',
 
@@ -48,11 +48,6 @@ const config = {
                         label: 'Blogs',
                         position: 'right'
                     },
-                    {
-                        label: 'About',
-                        to: '/about',
-                        position: 'right'
-                    }
                 ],
             },
             colorMode: {
