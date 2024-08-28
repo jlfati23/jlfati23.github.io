@@ -1,3 +1,0 @@
-# About me
-
-## Possible Topics

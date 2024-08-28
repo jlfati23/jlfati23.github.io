@@ -1,6 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
 
-/** @type {import('@docusaurus/types').Config} */
+
 const config = {
     title: 'Room of JL \'s own ',
     favicon: 'img/favicon.ico',
@@ -16,7 +15,6 @@ const config = {
     presets: [
         [
             'classic',
-            /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
                     sidebarPath: './sidebars.js',
@@ -32,7 +30,6 @@ const config = {
     ],
 
     themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             navbar: {
                 logo: {

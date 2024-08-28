@@ -1265,7 +1265,7 @@ RUN cd /app && npm install
 COPY . /app
 
 # 启动应用
-CMD ["node", "/app/index.js"]
+CMD ["node", "/app/index.mdx"]
 
 ```
 
