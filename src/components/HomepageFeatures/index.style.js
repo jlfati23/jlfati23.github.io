@@ -61,3 +61,4 @@ export const FooterNavItem = styled.a`
   }
 `;
 
+export default MainContainer
