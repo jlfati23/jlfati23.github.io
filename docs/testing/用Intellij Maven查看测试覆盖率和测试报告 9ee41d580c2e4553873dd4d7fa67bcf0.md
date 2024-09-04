@@ -1,3 +1,9 @@
+---
+tags: 
+- test
+- java
+---
+
 # 用Intellij/Maven查看测试覆盖率和测试报告
 
 **目录**
