@@ -1,64 +1,48 @@
+// index.style.js
 import styled from 'styled-components';
 
-// Main Container
+// Main container style
 export const MainContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: #F7EFE5; /* Background color for the page */
-  font-family: 'Roboto', sans-serif;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #E2BFD9; /* Background color for the main container */
+    padding: 20px;
 `;
 
-// Center Content
+// Center content style
 export const CenterContent = styled.div`
-  text-align: center;
-  max-width: 600px;
-  padding: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
 `;
 
-// Picture
-export const Picture = styled.img`
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-`;
-
-// Quote
+// Quote style
 export const Quote = styled.blockquote`
-  font-size: 1.5rem;
-  font-style: italic;
-  margin-top: 1rem;
-  color: #4A2C77;
-  border-left: 4px solid #6D2C91;
-  padding-left: 1rem;
+    font-size: 1.5em;
+    font-style: italic;
+    color: #674188; /* Dark purple for the quote */
+    border-left: 2px solid #C8A1E0; /* Light purple border */
+    padding-left: 20px;
+    margin: 0;
 `;
 
-// Footer Navigation
-export const FooterNav = styled.footer`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #E2BFD9; /* Background color for the footer */
-  padding: 1rem;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
+// Footer navigation container style
+export const FooterNav = styled.nav`
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 `;
 
-// Nav Item
+// Footer navigation item style
 export const FooterNavItem = styled.a`
-  color: #4A2C77;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
+    font-size: 1em;
+    color: #674188; /* Dark purple for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
 
-  &:hover {
-    color: #6D2C91;
-  }
+    &:hover {
+        color: #C8A1E0; /* Light purple on hover */
+    }
 `;
-
-export default MainContainer
