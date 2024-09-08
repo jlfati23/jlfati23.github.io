@@ -1,8 +1,5 @@
-// index.style.js
-import styled from 'styled-components';
-
-// Main container style
-const MainContainer = styled.div`
+/* Main container style */
+.mainContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,41 +7,39 @@ const MainContainer = styled.div`
     min-height: 100vh;
     background-color: #E2BFD9; /* Background color for the main container */
     padding: 20px;
-`;
+}
 
-// Center content style
-const CenterContent = styled.div`
+/* Center content style */
+.centerContent {
     text-align: center;
     margin-bottom: 20px;
-`;
+}
 
-// Quote style
-const Quote = styled.blockquote`
+/* Quote style */
+.quote {
     font-size: 1.5em;
     font-style: italic;
     color: #674188; /* Dark purple for the quote */
     border-left: 2px solid #C8A1E0; /* Light purple border */
     padding-left: 20px;
     margin: 0;
-`;
+}
 
-// Footer navigation container style
-const FooterNav = styled.nav`
+/* Footer navigation container style */
+.footerNav {
     display: flex;
     justify-content: center;
     gap: 15px;
-`;
+}
 
-// Footer navigation item style
-const FooterNavItem = styled.a`
+/* Footer navigation item style */
+.footerNavItem {
     font-size: 1em;
     color: #674188; /* Dark purple for links */
     text-decoration: none;
     transition: color 0.3s ease;
+}
 
-    &:hover {
-        color: #C8A1E0; /* Light purple on hover */
-    }
-`;
-
- export  {MainContainer, FooterNavItem, CenterContent, FooterNav, Quote,}
+.footerNavItem:hover {
+    color: #C8A1E0; /* Light purple on hover */
+}

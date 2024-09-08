@@ -1,22 +1,21 @@
-import {CenterContent, FooterNav, FooterNavItem, MainContainer, Quote} from "./index.style";
+import React from 'react';
+import styles from './HomepageFeature.module.css';
 
 const HomepageFeatures = () => {
     return (
-        <MainContainer>
-            <CenterContent>
-                <Quote>
+        <div className={styles.mainContainer}>
+            <div className={styles.centerContent}>
+                <blockquote className={styles.quote}>
                     "There are no facts, only interpretations."
-                </Quote>
-            </CenterContent>
-            <FooterNav>
-                <FooterNavItem href="/about">About Me</FooterNavItem>
-                <FooterNavItem href="https://github.com/jlfati23" target="_blank"
-                               rel="noopener noreferrer">GitHub</FooterNavItem>
-                <FooterNavItem href="https://www.linkedin.com/in/yourusername" target="_blank"
-                               rel="noopener noreferrer">LinkedIn</FooterNavItem>
-            </FooterNav>
-        </MainContainer>
+                </blockquote>
+            </div>
+            <nav className={styles.footerNav}>
+                <a href="/about" className={styles.footerNavItem}>About Me</a>
+                <a href="https://github.com/jlfati23" target="_blank" rel="noopener noreferrer" className={styles.footerNavItem}>GitHub</a>
+                <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className={styles.footerNavItem}>LinkedIn</a>
+            </nav>
+        </div>
     );
-
 }
-export default HomepageFeatures
+
+export default HomepageFeatures;
