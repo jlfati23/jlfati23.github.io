@@ -1,4 +1,4 @@
-import {CenterContent, FooterNav, FooterNavItem, MainContainer, Picture, Quote} from "./index.style";
+import {CenterContent, FooterNav, FooterNavItem, MainContainer, Quote} from "./index.style";
 
 const HomepageFeatures = () => {
     return (

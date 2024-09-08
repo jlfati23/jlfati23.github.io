@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 // Main container style
-export const MainContainer = styled.div`
+const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,13 +13,13 @@ export const MainContainer = styled.div`
 `;
 
 // Center content style
-export const CenterContent = styled.div`
+const CenterContent = styled.div`
     text-align: center;
     margin-bottom: 20px;
 `;
 
 // Quote style
-export const Quote = styled.blockquote`
+const Quote = styled.blockquote`
     font-size: 1.5em;
     font-style: italic;
     color: #674188; /* Dark purple for the quote */
@@ -29,14 +29,14 @@ export const Quote = styled.blockquote`
 `;
 
 // Footer navigation container style
-export const FooterNav = styled.nav`
+const FooterNav = styled.nav`
     display: flex;
     justify-content: center;
     gap: 15px;
 `;
 
 // Footer navigation item style
-export const FooterNavItem = styled.a`
+const FooterNavItem = styled.a`
     font-size: 1em;
     color: #674188; /* Dark purple for links */
     text-decoration: none;
@@ -46,3 +46,5 @@ export const FooterNavItem = styled.a`
         color: #C8A1E0; /* Light purple on hover */
     }
 `;
+
+ export  {MainContainer, FooterNavItem, CenterContent, FooterNav, Quote,}
