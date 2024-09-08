@@ -1,4 +1,4 @@
-const config= {
+const config = {
     title: 'Room of JL \'s own ',
     favicon: 'img/door-closed-svgrepo-com.svg',
 
@@ -37,12 +37,13 @@ const config= {
                     items: [
                         {
                             type: 'docSidebar',
-                            sidebarId: 'tutorialSidebar',
+                            sidebarId: 'docSidebar',
                             position: 'right',
                             label: 'Docs',
                         },
                         {
                             to: '/blog',
+                            sidebarId: 'blogSidebar',
                             label: 'Blogs',
                             position: 'right'
                         },
@@ -52,6 +53,9 @@ const config= {
                     defaultMode: 'light',
                     disableSwitch: true,
                     respectPrefersColorScheme: false,
+                },
+                sidebar: {
+                    blogSidebar: require('./sidebars.js').blogSidebar,
                 },
             }
         ),

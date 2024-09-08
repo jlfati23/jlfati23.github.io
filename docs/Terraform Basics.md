@@ -6,65 +6,7 @@ date: 2024-09-08
 ---
 
 
-<!-- TOC -->
-* [Types of Infrastructure as Code (IaC) Tools](#types-of-infrastructure-as-code-iac-tools)
-    * [1. **Configuration Management Tools**](#1-configuration-management-tools)
-    * [2. **Server Templating Tools**](#2-server-templating-tools)
-    * [3. **Provisioning Tools**](#3-provisioning-tools)
-    * [**Summary of Categories:**](#summary-of-categories)
-* [Terraform Basics](#terraform-basics)
-    * [1. **What is Terraform?**](#1-what-is-terraform)
-    * [2. **Core Concepts**](#2-core-concepts)
-    * [3. **Basic Commands**](#3-basic-commands)
-    * [4. **State Management**](#4-state-management)
-* [Terraform Usage](#terraform-usage)
-  * [1. Using Multiple Providers](#1-using-multiple-providers)
-    * [**How to Use Multiple Providers**](#how-to-use-multiple-providers)
-    * [**Example: Using AWS and Azure Providers**](#example-using-aws-and-azure-providers)
-    * [**Explanation**:](#explanation)
-  * [2. Using Variables in Terraform](#2-using-variables-in-terraform)
-    * [**How to Use Input Variables**](#how-to-use-input-variables)
-    * [Terraform Variable Precedence](#terraform-variable-precedence)
-    * [**Example**](#example)
-    * [**Key Points**:](#key-points)
-  * [3. Dependencies in Terraform](#3-dependencies-in-terraform)
-* [Advanced Terraform Commands](#advanced-terraform-commands)
-    * [**1. `terraform validate`**](#1-terraform-validate)
-    * [**2. `terraform fmt`**](#2-terraform-fmt)
-    * [**3. `terraform show -json`**](#3-terraform-show--json)
-    * [**4. `terraform providers`**](#4-terraform-providers)
-    * [**5. `terraform providers mirror`**](#5-terraform-providers-mirror)
-    * [**6. `terraform output <specific variable>`**](#6-terraform-output-specific-variable)
-    * [**7. `terraform refresh`**](#7-terraform-refresh)
-    * [**8. `terraform graph`**](#8-terraform-graph)
-* [Terraform State](#terraform-state)
-    * [**Overview**](#overview)
-    * [**Sensitive Information in State Files**](#sensitive-information-in-state-files)
-    * [**Best Practices for Handling Sensitive Information in State Files**](#best-practices-for-handling-sensitive-information-in-state-files)
-* [Terraform Lifecycle](#terraform-lifecycle)
-    * [**1. Initialization (`terraform init`)**](#1-initialization-terraform-init)
-    * [**2. Planning (`terraform plan`)**](#2-planning-terraform-plan)
-    * [**3. Application (`terraform apply`)**](#3-application-terraform-apply)
-    * [**4. Destroy (`terraform destroy`)**](#4-destroy-terraform-destroy)
-    * [**5. Refresh (`terraform refresh`)**](#5-refresh-terraform-refresh)
-    * [**6. Validate (`terraform validate`)**](#6-validate-terraform-validate)
-    * [**7. Format (`terraform fmt`)**](#7-format-terraform-fmt)
-    * [**8. Output (`terraform output`)**](#8-output-terraform-output)
-    * [**9. Graph (`terraform graph`)**](#9-graph-terraform-graph)
-    * [**10. Providers (`terraform providers`)**](#10-providers-terraform-providers)
-    * [**11. Providers Mirror (`terraform providers mirror`)**](#11-providers-mirror-terraform-providers-mirror)
-    * [**Lifecycle Management in Configuration**](#lifecycle-management-in-configuration)
-* [Q & A](#q--a)
-  * [What's the difference between Configuration Management Tools and Provisioning Tools since they both are related with infrastructure?](#whats-the-difference-between-configuration-management-tools-and-provisioning-tools-since-they-both-are-related-with-infrastructure)
-    * [1. **Primary Focus**](#1-primary-focus)
-    * [2. **Lifecycle Stage**](#2-lifecycle-stage)
-    * [3. **Declarative vs. Imperative Approach**](#3-declarative-vs-imperative-approach)
-    * [4. **Typical Use Cases**](#4-typical-use-cases)
-    * [5. **Interdependence**](#5-interdependence)
-    * [**In Summary:**](#in-summary)
-<!-- TOC -->
-
-# Types of Infrastructure as Code (IaC) Tools
+##  Types of Infrastructure as Code (IaC) Tools
 
 Based on their primary functions, IaC tools can be  broadly divided  into three categories: Configuration Management Tools, Server Templating Tools, and Provisioning Tools. 
 
@@ -116,7 +58,7 @@ Based on their primary functions, IaC tools can be  broadly divided  into three 
 - **Server Templating Tools**: Focus on creating reusable, pre-configured server images or templates that can be deployed across environments.
 - **Provisioning Tools**: Focus on creating, managing, and destroying infrastructure components, managing their entire lifecycle.
 
-# Terraform Basics
+## Terraform Basics
 
 ### 1. **What is Terraform?**
 
@@ -155,18 +97,17 @@ Based on their primary functions, IaC tools can be  broadly divided  into three 
 - **State Files:** Terraform saves the current state of the infrastructure in a file called `terraform.tfstate`. This file is important for managing and updating your infrastructure.
 - **Remote State:** For collaborative environments, you can store the state file remotely in an S3 bucket or a similar service to enable shared access and avoid conflicts.
 
-# Terraform Usage
+## Terraform Usage
 
 
+### 1. Using Multiple Providers
 
-## 1. Using Multiple Providers
-
-### **How to Use Multiple Providers**
+#### **How to Use Multiple Providers**
 
 - **Define Multiple Providers**: You can define different providers in the same Terraform configuration.
 - **Alias Providers**: You can use provider aliases to configure multiple instances of the same provider with different settings.
 
-### **Example: Using AWS and Azure Providers**
+#### **Example: Using AWS and Azure Providers**
 
 ```
 # Define the AWS provider
@@ -204,24 +145,24 @@ resource "aws_s3_bucket" "west_bucket" {
 
 ```
 
-### **Explanation**:
+#### **Explanation**:
 
 - **Multiple Providers**: The configuration uses both `aws` and `azurerm` providers to manage AWS and Azure resources.
 - **Aliased Provider**: An alias `west` is used for the `aws` provider to create resources in a different AWS region (`us-west-2`).
 
 
 
-## 2. Using Variables in Terraform
+### 2. Using Variables in Terraform
 
 In Terraform, **input variables** are used to parameterize configurations, allowing you to make your Terraform code more flexible and reusable. Instead of hardcoding values, you can define variables and pass in different values as needed.
 
-### **How to Use Input Variables**
+#### **How to Use Input Variables**
 
 1. **Define a Variable**: You define variables in a `variables.tf` file or inline within the configuration.
 2. **Assign Values to Variables**: Values can be assigned using a `terraform.tfvars` file, environment variables, or directly via the command line.
 3. **Use Variables in Configuration**: Reference these variables in your Terraform configuration files.
 
-### Terraform Variable Precedence
+#### Terraform Variable Precedence
 
 Terraform follows a specific order of precedence when assigning values to input variables. This determines which value is used when the same variable is defined in multiple places. Here's the order of precedence, **from highest to lowest**:
 
@@ -308,7 +249,7 @@ Terraform follows a specific order of precedence when assigning values to input 
 
 Terraform will use the value from the highest precedence source available, allowing for flexible and dynamic configuration management.
 
-### **Example**
+#### **Example**
 
 **1. Define a Variable**
 
@@ -350,7 +291,7 @@ resource "aws_instance" "example" {
     ```
     
 
-### **Key Points**:
+#### **Key Points**:
 
 - **Reusability**: Input variables allow you to reuse the same Terraform configuration with different values.
 - **Flexibility**: Easily change settings like region, instance type, or any other configurable options without modifying the configuration code.
@@ -358,7 +299,7 @@ resource "aws_instance" "example" {
 
 
 
-## 3. Dependencies in Terraform
+### 3. Dependencies in Terraform
 
 - **Implicit Dependencies**: Terraform automatically creates dependencies based on resource references. If one resource references another, Terraform knows the second resource must be created first.
     - **Example**:
@@ -393,7 +334,7 @@ resource "aws_instance" "example" {
         ```
         
 
-# Advanced Terraform Commands
+## Advanced Terraform Commands
 
 ### **1. `terraform validate`**
 
@@ -495,7 +436,7 @@ These commands help with various aspects of Terraform workflows, including valid
 
 
 
-# Terraform State
+## Terraform State
 
 Terraform state files are critical for managing the infrastructure and maintaining the current state of resources. However, they can contain sensitive information, and it's important to handle them securely.
 
@@ -555,7 +496,7 @@ By implementing these practices, you can help ensure that sensitive information 
 
 
 
-# Terraform Lifecycle
+## Terraform Lifecycle
 
 In Terraform, the lifecycle of infrastructure is managed through a series of stages that cover the creation, maintenance, and destruction of resources. 
 
@@ -665,13 +606,13 @@ resource "aws_instance" "example" {
 
 This `lifecycle` configuration helps manage how Terraform handles resource creation and destruction, providing control over how changes are applied.
 
-# Q & A
+## Q & A
 
-## What's the difference between Configuration Management Tools and Provisioning Tools since they both are related with infrastructure?
+### What's the difference between Configuration Management Tools and Provisioning Tools since they both are related with infrastructure?
 
 While both Configuration Management (CM) Tools and Provisioning Tools are essential for managing infrastructure, they serve different purposes and are used at different stages of the infrastructure lifecycle. Here’s a breakdown of their differences:
 
-### 1. **Primary Focus**
+1. **Primary Focus**
 
 - **Configuration Management Tools**:
     - **Purpose**: CM tools focus on maintaining and enforcing the desired state of **existing infrastructure.** They ensure that systems are correctly configured, software is properly installed, and services are running as expected.
@@ -682,7 +623,7 @@ While both Configuration Management (CM) Tools and Provisioning Tools are essent
     - **Scope**: These tools are typically used at the beginning of the infrastructure lifecycle to create and deploy infrastructure resources, but they can also manage updates and teardown.
     - **Example Tasks**: Creating virtual machines, setting up networks, allocating storage, configuring load balancers, and deploying other infrastructure components.
 
-### 2. **Lifecycle Stage**
+2. **Lifecycle Stage**
 
 - **Configuration Management Tools**:
     - **When Used**: **After the infrastructure is provisioned and running**. CM tools manage and maintain the software and configuration states over time.
@@ -691,7 +632,7 @@ While both Configuration Management (CM) Tools and Provisioning Tools are essent
     - **When Used**: At the initial stage to create and deploy infrastructure resources. They may also be used to update or destroy resources.
     - **Role in Lifecycle**: Initial setup and lifecycle management. They define the infrastructure's desired state and create, update, or destroy resources to match that state.
 
-### 3. **Declarative vs. Imperative Approach**
+ 3. **Declarative vs. Imperative Approach**
 
 - **Configuration Management Tools**:
     - **Approach**: **Can be both declarative and imperative.** For example, Ansible (which is declarative) describes what the system's state should be, while Chef (which can be imperative) describes how to achieve that state.
@@ -700,7 +641,7 @@ While both Configuration Management (CM) Tools and Provisioning Tools are essent
     - **Approach**: **Primarily declarative.** Provisioning tools usually define the desired end state of the infrastructure, and the tool automatically figures out how to achieve that state.
     - **Example**: Terraform configuration files declare that a certain number of instances should exist in a specific region with particular settings, and Terraform determines the steps to achieve that.
 
-### 4. **Typical Use Cases**
+4. **Typical Use Cases**
 
 - **Configuration Management Tools**:
     - **Scenario**: After provisioning a server, you need to ensure it has the correct version of Apache installed, is configured correctly, and has the necessary firewall rules applied.
@@ -709,14 +650,14 @@ While both Configuration Management (CM) Tools and Provisioning Tools are essent
     - **Scenario**: You need to create a set of EC2 instances on AWS, configure a VPC, attach an EBS volume, and deploy a load balancer.
     - **Tools**: Terraform, AWS CloudFormation, Azure ARM Templates, Google Cloud Deployment Manager.
 
-### 5. **Interdependence**
+ 5. **Interdependence**
 
 - **Configuration Management Tools**:
     - Often depend on infrastructure being provisioned first. For example, Ansible will manage and configure servers that have already been created by a provisioning tool.
 - **Provisioning Tools**:
     - Can work independently or in conjunction with CM tools. For example, Terraform can provision the infrastructure, and then Ansible can be used to configure the instances that Terraform has created.
 
-### **In Summary:**
+ **In Summary:**
 
 - **Configuration Management Tools** manage the software, settings, and ongoing state of already existing infrastructure.
 - **Provisioning Tools** create and manage the lifecycle of infrastructure resources from scratch, ensuring they exist as defined.

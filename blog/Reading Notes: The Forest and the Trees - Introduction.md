@@ -1,11 +1,9 @@
 ---
 tags: 
 - reading note
-
 date: 2024-09-04
+slug: /theForestAndTheTrees/Introduction
 ---
-
-**Reading Notes: The Forest and the Trees - Introduction**
 
 In the introduction to *The Forest and the Trees*, the author discusses the essence of sociology and its importance in our lives. He emphasizes that sociology is not just an academic discipline but a crucial tool for understanding and addressing the suffering in the world. The practice of sociology is deeply moral—not in a simplistic sense of good versus bad, but in a more profound, sociological sense that reflects our existence as human beings and our collective life.
 
