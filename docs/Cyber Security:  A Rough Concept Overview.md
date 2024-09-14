@@ -346,7 +346,7 @@ Hackers are typically categorized based on their intentions and the legality of 
 
 
 
-### **Malware** (malicious software)
+## **Malware** (malicious software)
 
 **Malware** (malicious software) is any software intentionally designed to cause harm to computers, networks, or users. It comes in various types, each with a specific purpose. Here's a brief overview of common malware types:
 
@@ -392,7 +392,7 @@ Hackers are typically categorized based on their intentions and the legality of 
 
 
 
-### **Defences**
+## **Defences**
 
 1. **Firewalls**: A firewall is a security device that monitors incoming and outgoing network traffic. They can prevent users from sending certain data outside of their network and can also prevent access to certain websites.
     1. Firewalls work by: 
@@ -423,7 +423,7 @@ Hackers are typically categorized based on their intentions and the legality of 
 
 
 
-### Cyber Security at Work Place
+## Cyber Security at Work Place
 
 **Security Policy**: This is a written document that describes how an organization protects its virtual and physical data assets from threats. 
 
@@ -443,7 +443,7 @@ Hackers are typically categorized based on their intentions and the legality of 
 
 
 
-### Cyber Warefare
+## Cyber Warefare
 
 
 
