@@ -1,0 +1,46 @@
+.excerptsContainer {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--ifm-color-primary);;
+}
+
+
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cardLink {
+    text-decoration: none;
+}
+
+.card {
+    border: 1px solid var(--ifm-color-primary-lightest); /* Border color */
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--ifm-color-primary-light); /* Background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--ifm-color-primary-darkest); /* Text color */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+    background-color: var(--ifm-color-primary-lightest); /* Slight background color change on hover */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+.card blockquote {
+    margin: 0;
+    font-style: italic;
+    color: var(--ifm-color-primary-darkest); /* Blockquote text color */
+}
+
+.card cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--ifm-color-primary-dark); /* Cite text color */
+}
+

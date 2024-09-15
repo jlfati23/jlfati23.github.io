@@ -47,6 +47,12 @@ const config = {
                             label: 'Blogs',
                             position: 'right'
                         },
+                        {
+                            to: '/excerpts',
+                            sidebarId: 'excerptSidebar',
+                            label: 'Excerpts',
+                            position: 'right'
+                        }
                     ],
                 },
                 colorMode: {
