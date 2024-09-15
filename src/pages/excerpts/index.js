@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import styles from './excerpts.module.css';
+import styles from './Excerpts.module.css';
 
 const excerpts = [
     {
