@@ -9,9 +9,9 @@ const excerpts = [
         title: "closer",
     },
     {
-        text: "The only way to make sense out of change is to plunge into it, move with it, and join the dance.",
-        source: "Alan Watts, Podcast Episode 42",
-        title: "test",
+        text: "One of the most remarkable things about human beings is our ability to use culture to create the world we actually live in, to make up our world from scratch.Most of what we take for reality consists not of things as they ‘really’ are but of ideas people have developed about things as they think they are. Culture is where all those ideas wind up, and culture is what we look to for the tools we need to make sense of things, including ourselves..",
+        source: "Allan Johnson,The Forest and the Trees: Sociology as Life, Practice, and Promise, Chapter 2",
+        title: "Culture",
     },
 ];
 
@@ -28,7 +28,7 @@ const ExcerptCard = ({excerpt}) => {
 }
 
 
-export default function Excerpts() {
+const Excerpts = ()=> {
     return (
         <div className={styles.excerptsContainer}>
             <div className={styles.cardsContainer}>
@@ -39,3 +39,4 @@ export default function Excerpts() {
         </div>
     );
 }
+export default Excerpts

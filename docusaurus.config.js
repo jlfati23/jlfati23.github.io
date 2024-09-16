@@ -57,11 +57,8 @@ const config = {
                 },
                 colorMode: {
                     defaultMode: 'light',
-                    disableSwitch: true,
+                    // disableSwitch: true,
                     respectPrefersColorScheme: false,
-                },
-                sidebar: {
-                    blogSidebar: require('./sidebars.js').blogSidebar,
                 },
             }
         ),
