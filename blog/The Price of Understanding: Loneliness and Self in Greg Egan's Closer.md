@@ -1,7 +1,7 @@
 ---
 tags: 
 - reading note
-date: 2024-09-016
+date: 2024-09-16
 ---
 
 
